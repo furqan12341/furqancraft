@@ -1,0 +1,148 @@
+:root {
+  --bg-light: #f9f9f9;
+  --bg-dark: #111;
+  --text-light: #222;
+  --text-dark: #fff;
+  --primary: #00bcd4;
+  --accent: #2196f3;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#toggle-mode {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  object-fit: cover;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: var(--accent);
+}
+
+.glow {
+  animation: glowAnim 1.5s infinite alternate;
+}
+
+@keyframes glowAnim {
+  from { box-shadow: 0 0 5px var(--accent); }
+  to { box-shadow: 0 0 20px var(--accent); }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
